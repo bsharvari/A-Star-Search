@@ -1,19 +1,15 @@
-# -----------
-# User Instructions:
-#
-# Modify the the search function so that it becomes an A* search algorithm as defined in the previous lectures.
-#
-# Your function should return the expanded grid which shows, for each element, the count when it was expanded or -1 if
-# the element was never expanded.
-#
-# If there is no path from init to goal, the function should return the string 'fail'
-# ----------
-
-
 def search(grid, init, goal, cost, delta, heuristic):
-    # ----------------------------------------
-    # modify the code below
-    # ----------------------------------------
+    """
+    :param grid: 2D matrix of the world, with the obstacles marked as '1', rest as '0'
+    :param init: list of x and y co-ordinates of the robot's initial position
+    :param goal: list of x and y co-ordinates of the robot's intended final position
+    :param cost: cost of moving one position in the grid
+    :param delta: list of all the possible movements
+    :param heuristic: 2D matrix of same size as grid, giving the cost of reaching the goal from each cell
+    :return: path: list of the cost of the minimum path, and the goal position
+    :return: extended: 2D matrix of same size as grid, for each element, the count when it was expanded or -1 if
+             the element was never expanded.
+    """
     path = []
     val = 1
 
